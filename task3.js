@@ -1,7 +1,8 @@
 function fazzFood(harga, voucher, jarak, pajak) {
-  // HARGA
-  if (typeof harga == "number") {
-    console.log("Harga = " + harga);
+  // kevalidan voucher
+  if (voucher !== "FAZZFOOD50" && voucher !== "DITRAKTIR60") {
+    console.log("Tidak ada voucher");
+    return;
   }
 
   //  VOUCHER
@@ -47,4 +48,4 @@ function fazzFood(harga, voucher, jarak, pajak) {
   console.log("SubTotal = " + subTotal);
 }
 
-fazzFood(75000, "DITRAKTIR60", 5, true);
+fazzFood(75000, "FAZZFOOD50", 5, true);
